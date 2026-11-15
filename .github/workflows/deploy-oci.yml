@@ -1,0 +1,67 @@
+name: Deploy to OCI VM
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy AI Agent to Oracle Cloud VM
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Copy Files to OCI VM via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.OCI_VM_HOST }}
+          username: ${{ secrets.OCI_VM_USER }}
+          key: ${{ secrets.OCI_SSH_KEY }}
+          port: ${{ secrets.OCI_VM_PORT || 22 }}
+          target: "~/oci-gold-ai-agent"
+          source: "src,data,tests,main.py,requirements.txt,Dockerfile,docker-compose.yml,gold-agent.service,deploy_oci.sh,.env.example"
+          strip_components: 0
+          overwrite: true
+
+      - name: Restart AI Agent on OCI VM
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.OCI_VM_HOST }}
+          username: ${{ secrets.OCI_VM_USER }}
+          key: ${{ secrets.OCI_SSH_KEY }}
+          port: ${{ secrets.OCI_VM_PORT || 22 }}
+          script: |
+            set -e
+            cd ~/oci-gold-ai-agent
+
+            # Ensure .env exists (create from template if missing)
+            if [ ! -f .env ]; then
+              cp .env.example .env
+              echo "Created initial .env file. Please edit it with your Kafka IP."
+            fi
+
+            echo "=== Checking Execution Engine ==="
+            if command -v docker &> /dev/null && (command -v docker-compose &> /dev/null || docker compose version &> /dev/null); then
+              echo "Docker detected. Building and restarting container..."
+              if docker compose version &> /dev/null; then
+                docker compose down || true
+                docker compose up -d --build
+              else
+                docker-compose down || true
+                docker-compose up -d --build
+              fi
+              echo "=== Docker Container Status ==="
+              docker ps --filter "name=oci-gold-ai-agent"
+            else
+              echo "Docker not detected. Deploying via native Linux systemd service..."
+              chmod +x deploy_oci.sh
+              ./deploy_oci.sh
+              sudo systemctl restart gold-agent
+              sudo systemctl status gold-agent --no-pager
+            fi
+
+            echo "=== Deployment to OCI Completed Successfully ==="

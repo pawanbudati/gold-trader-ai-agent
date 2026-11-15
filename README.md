@@ -133,11 +133,30 @@ Whenever the AI Agent executes an action or detects an event, it publishes a JSO
 
 ## 5. Deployment on Oracle Cloud Infrastructure (OCI)
 
+### Automated CI/CD Deployment via GitHub Actions (Recommended)
+Every time you push to `main` (or click **Run Workflow** in GitHub Actions), the workflow automatically copies updated code to your OCI VM and restarts the AI Agent container.
+
+#### 1. Add Secrets to Your GitHub Repository
+Go to your repository on GitHub: **Settings $\rightarrow$ Secrets and variables $\rightarrow$ Actions $\rightarrow$ New repository secret**, and add:
+
+| Secret Name | Value |
+| :--- | :--- |
+| `OCI_VM_HOST` | Public IP address of your OCI VM (e.g., `140.238.xxx.xxx`) |
+| `OCI_VM_USER` | SSH username (`opc` for Oracle Linux, `ubuntu` for Ubuntu) |
+| `OCI_SSH_KEY` | Your private SSH key (contents of `id_rsa` or `id_ed25519` used for OCI) |
+| `OCI_VM_PORT` | *(Optional, defaults to 22)* SSH Port |
+
+Once added, every `git push origin main` will automatically build and restart your AI Agent on your OCI VM!
+
+---
+
+### Manual Deployment on OCI
+
 ### Prerequisites on OCI
 - 1 Compute Instance (VM.Standard.E4.Flex or VM.Standard.A1.Flex Always Free).
-- Network Security Group (NSG) permitting port `9092` between your Agent VM and Kafka VM.
+- Network Security Group (NSG) / Ingress rules permitting port `9092` between your Agent VM and Kafka VM.
 
-### Option A: 1-Command Docker Deployment (Recommended)
+### Option A: 1-Command Docker Deployment (Manual)
 
 1. SSH into your OCI VM:
    ```bash
