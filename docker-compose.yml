@@ -1,38 +1,10 @@
 version: '3.8'
 
 services:
-  # 1. The Autonomous AI Agent (Market Scanner & Kafka Producer)
   gold-agent:
     build: .
     container_name: oci-gold-ai-agent
     restart: unless-stopped
-    command: ["python", "main.py"]
-    env_file:
-      - .env
-    volumes:
-      - ./data:/app/data
-    network_mode: host
-
-  # 2. Kafka-to-Database Sink Daemon (Persists every Kafka message to DB)
-  db-sink:
-    build: .
-    container_name: oci-gold-db-sink
-    restart: unless-stopped
-    command: ["python", "run_db_sink.py"]
-    env_file:
-      - .env
-    volumes:
-      - ./data:/app/data
-    network_mode: host
-
-  # 3. Live Terminal Consumer (Optional for CLI viewing)
-  signal-consumer:
-    build: .
-    container_name: oci-gold-signal-consumer
-    restart: unless-stopped
-    command: ["python", "run_consumer.py"]
     env_file:
       - .env
     network_mode: host
-    profiles:
-      - consumer

@@ -23,7 +23,7 @@ jobs:
           key: ${{ secrets.OCI_SSH_KEY }}
           port: ${{ secrets.OCI_VM_PORT || 22 }}
           target: "~/oci-gold-ai-agent"
-          source: "src,data,tests,main.py,run_consumer.py,run_db_sink.py,requirements.txt,Dockerfile,docker-compose.yml,gold-agent.service,deploy_oci.sh,.env.example"
+          source: "src,data,tests,main.py,requirements.txt,Dockerfile,docker-compose.yml,gold-agent.service,deploy_oci.sh,.env.example"
           strip_components: 0
           overwrite: true
 
