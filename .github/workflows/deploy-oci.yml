@@ -60,8 +60,6 @@ jobs:
               echo "Docker not detected. Deploying via native Linux systemd service..."
               chmod +x deploy_oci.sh
               ./deploy_oci.sh
-              sudo systemctl restart gold-agent
-              sudo systemctl status gold-agent --no-pager
             fi
 
             echo "=== Deployment to OCI Completed Successfully ==="

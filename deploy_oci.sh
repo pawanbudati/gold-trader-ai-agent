@@ -5,10 +5,13 @@
 # ==============================================================================
 set -e
 
+SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 INSTALL_DIR="/opt/oci-gold-ai-agent"
 SERVICE_NAME="gold-agent"
 
 echo "=== Deploying Autonomous AI Gold Trading Agent on OCI VM ==="
+echo "Source Directory:  $SOURCE_DIR"
+echo "Install Directory: $INSTALL_DIR"
 
 # 1. Install Python packages if missing
 if command -v apt-get &> /dev/null; then
@@ -19,30 +22,50 @@ elif command -v dnf &> /dev/null; then
 fi
 
 # 2. Create target directory
-sudo mkdir -p $INSTALL_DIR
-sudo chown -R $USER:$USER $INSTALL_DIR
+sudo mkdir -p "$INSTALL_DIR"
+sudo chown -R "$USER:$USER" "$INSTALL_DIR"
 
-# 3. Copy files to /opt/oci-gold-ai-agent
-cp -r src/ $INSTALL_DIR/
-cp -r data/ $INSTALL_DIR/
-cp main.py requirements.txt $INSTALL_DIR/
-cp .env $INSTALL_DIR/ 2>/dev/null || cp .env.example $INSTALL_DIR/.env 2>/dev/null || true
+# 3. Copy application files from source to install directory
+cp -r "$SOURCE_DIR/src" "$INSTALL_DIR/"
+cp -r "$SOURCE_DIR/data" "$INSTALL_DIR/"
+cp "$SOURCE_DIR/main.py" "$SOURCE_DIR/requirements.txt" "$INSTALL_DIR/"
+[ -f "$SOURCE_DIR/gold-agent.service" ] && cp "$SOURCE_DIR/gold-agent.service" "$INSTALL_DIR/"
+
+# Handle .env file
+if [ -f "$SOURCE_DIR/.env" ]; then
+    cp "$SOURCE_DIR/.env" "$INSTALL_DIR/.env"
+elif [ ! -f "$INSTALL_DIR/.env" ] && [ -f "$SOURCE_DIR/.env.example" ]; then
+    cp "$SOURCE_DIR/.env.example" "$INSTALL_DIR/.env"
+fi
 
 # 4. Setup Python Virtual Environment
-cd $INSTALL_DIR
-python3 -m venv venv
+cd "$INSTALL_DIR"
+if [ ! -d "venv" ]; then
+    python3 -m venv venv
+fi
 ./venv/bin/pip install --upgrade pip
 ./venv/bin/pip install -r requirements.txt
 
 # 5. Configure Systemd Daemon
-sudo cp gold-agent.service /etc/systemd/system/
-sudo sed -i "s|User=ubuntu|User=$USER|g" /etc/systemd/system/gold-agent.service
-sudo systemctl daemon-reload
-sudo systemctl enable $SERVICE_NAME
-sudo systemctl restart $SERVICE_NAME
+SERVICE_SRC="$SOURCE_DIR/gold-agent.service"
+if [ ! -f "$SERVICE_SRC" ]; then
+    SERVICE_SRC="$INSTALL_DIR/gold-agent.service"
+fi
+
+if [ -f "$SERVICE_SRC" ]; then
+    echo "Installing systemd service from $SERVICE_SRC..."
+    sudo cp "$SERVICE_SRC" /etc/systemd/system/gold-agent.service
+    sudo sed -i "s|User=ubuntu|User=$USER|g" /etc/systemd/system/gold-agent.service
+    sudo sed -i "s|User=REPLACE_USER|User=$USER|g" /etc/systemd/system/gold-agent.service
+    sudo systemctl daemon-reload
+    sudo systemctl enable "$SERVICE_NAME"
+    sudo systemctl restart "$SERVICE_NAME"
+    echo "=== Service successfully restarted ==="
+    sudo systemctl status "$SERVICE_NAME" --no-pager
+else
+    echo "ERROR: gold-agent.service not found!"
+    exit 1
+fi
 
 echo "=== Deployment Complete! ==="
-echo "Service Status:"
-sudo systemctl status $SERVICE_NAME --no-pager
-echo ""
 echo "To view live streaming agent logs: sudo journalctl -u $SERVICE_NAME -f"
