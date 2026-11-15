@@ -1,0 +1,17 @@
+[Unit]
+Description=Autonomous OCI AI Gold Trading Agent Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/oci-gold-ai-agent
+EnvironmentFile=/opt/oci-gold-ai-agent/.env
+ExecStart=/opt/oci-gold-ai-agent/venv/bin/python /opt/oci-gold-ai-agent/main.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

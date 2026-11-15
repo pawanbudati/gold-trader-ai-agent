@@ -1,0 +1,1235 @@
+[
+  {
+    "message_id": 11686,
+    "all_ids": [
+      11686,
+      11687,
+      11688,
+      11689
+    ],
+    "timestamp_utc": "2026-07-01T08:24:35+00:00",
+    "timestamp_ist": "2026-07-01T13:54:35+05:30",
+    "direction": "BUY",
+    "entry_price": 3979.0,
+    "sl": 3965.0,
+    "tp": [
+      3995.0,
+      4015.0
+    ],
+    "raw_text": "Buy Gold\nBuy Gold \u2705 @3979\nTRG 3995 4015\nSL 3965"
+  },
+  {
+    "message_id": 11719,
+    "all_ids": [
+      11719,
+      11720
+    ],
+    "timestamp_utc": "2026-07-10T03:03:09+00:00",
+    "timestamp_ist": "2026-07-10T08:33:09+05:30",
+    "direction": "BUY",
+    "entry_price": 4129.0,
+    "sl": 4115.0,
+    "tp": [
+      4150.0,
+      4170.0
+    ],
+    "raw_text": "Buy Gold \u2705 @4129\nTRG 4150 4170 SL 4115"
+  },
+  {
+    "message_id": 11722,
+    "all_ids": [
+      11722,
+      11723
+    ],
+    "timestamp_utc": "2026-07-10T11:27:29+00:00",
+    "timestamp_ist": "2026-07-10T16:57:29+05:30",
+    "direction": "SELL",
+    "entry_price": 4103.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Sell Gold \u2705\n@4103"
+  },
+  {
+    "message_id": 11755,
+    "all_ids": [
+      11755,
+      11756,
+      11757
+    ],
+    "timestamp_utc": "2026-07-20T07:31:00+00:00",
+    "timestamp_ist": "2026-07-20T13:01:00+05:30",
+    "direction": "SELL",
+    "entry_price": 4005.0,
+    "sl": 4020.0,
+    "tp": [
+      3970.0,
+      3940.0,
+      3910.0
+    ],
+    "raw_text": "Sell Gold \u2705\n@4005 TRG 3970 3940 3910\nSL 4020"
+  },
+  {
+    "message_id": 11761,
+    "all_ids": [
+      11761,
+      11762,
+      11763
+    ],
+    "timestamp_utc": "2026-07-20T11:27:23+00:00",
+    "timestamp_ist": "2026-07-20T16:57:23+05:30",
+    "direction": "SELL",
+    "entry_price": 4021.0,
+    "sl": null,
+    "tp": [
+      3970.0,
+      3940.0,
+      3900.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold \u2705\nSell Gold @4021 TRG 3970 3940 3900"
+  },
+  {
+    "message_id": 11779,
+    "all_ids": [
+      11779,
+      11780,
+      11781
+    ],
+    "timestamp_utc": "2026-07-22T09:31:42+00:00",
+    "timestamp_ist": "2026-07-22T15:01:42+05:30",
+    "direction": "SELL",
+    "entry_price": 4118.0,
+    "sl": null,
+    "tp": [
+      4100.0,
+      4094.0
+    ],
+    "raw_text": "Sell Gold \u2705\n@4118\nTRG 4100 4094"
+  },
+  {
+    "message_id": 11784,
+    "all_ids": [
+      11784,
+      11785
+    ],
+    "timestamp_utc": "2026-07-23T04:57:08+00:00",
+    "timestamp_ist": "2026-07-23T10:27:08+05:30",
+    "direction": "SELL",
+    "entry_price": 4121.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Sell Gold\n@4121"
+  },
+  {
+    "message_id": 11809,
+    "all_ids": [
+      11809,
+      11810,
+      11811,
+      11812
+    ],
+    "timestamp_utc": "2026-07-27T05:43:18+00:00",
+    "timestamp_ist": "2026-07-27T11:13:18+05:30",
+    "direction": "SELL",
+    "entry_price": 4088.0,
+    "sl": 4095.0,
+    "tp": [
+      4070.0,
+      4050.0
+    ],
+    "raw_text": "Sell Gold Small Quantity\n@4088\nTRG 4070 4050\nSL 4095"
+  },
+  {
+    "message_id": 11821,
+    "all_ids": [
+      11821,
+      11822
+    ],
+    "timestamp_utc": "2026-07-27T13:04:54+00:00",
+    "timestamp_ist": "2026-07-27T18:34:54+05:30",
+    "direction": "SELL",
+    "entry_price": 4084.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Sell Gold \u2705\n@4084"
+  },
+  {
+    "message_id": 11844,
+    "all_ids": [
+      11844,
+      11845,
+      11846
+    ],
+    "timestamp_utc": "2026-07-28T05:15:56+00:00",
+    "timestamp_ist": "2026-07-28T10:45:56+05:30",
+    "direction": "SELL",
+    "entry_price": 4043.0,
+    "sl": 4051.0,
+    "tp": [
+      4030.0,
+      4000.0
+    ],
+    "raw_text": "Sell Gold \u2705 Small Quantity\n@4043\nTRG 4030 4000 SL 4051"
+  },
+  {
+    "message_id": 11850,
+    "all_ids": [
+      11850,
+      11851
+    ],
+    "timestamp_utc": "2026-07-28T06:41:23+00:00",
+    "timestamp_ist": "2026-07-28T12:11:23+05:30",
+    "direction": "SELL",
+    "entry_price": 4052.0,
+    "sl": 4070.0,
+    "tp": [
+      4030.0,
+      4000.0
+    ],
+    "raw_text": "Sell Gold @4052\nTRG 4030 4000 SL 4070"
+  },
+  {
+    "message_id": 11873,
+    "all_ids": [
+      11873,
+      11874
+    ],
+    "timestamp_utc": "2026-07-30T08:15:49+00:00",
+    "timestamp_ist": "2026-07-30T13:45:49+05:30",
+    "direction": "BUY",
+    "entry_price": 4053.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Buy Gold Small Quantity \u2705\n@4053"
+  },
+  {
+    "message_id": 11889,
+    "all_ids": [
+      11889,
+      11890,
+      11891
+    ],
+    "timestamp_utc": "2026-07-31T07:53:47+00:00",
+    "timestamp_ist": "2026-07-31T13:23:47+05:30",
+    "direction": "SELL",
+    "entry_price": 4071.0,
+    "sl": 4086.0,
+    "tp": [
+      4060.0,
+      4040.0
+    ],
+    "raw_text": "Sell Gold Small Quantity\n@4071\nTRG 4060 4040 SL 4086"
+  },
+  {
+    "message_id": 11909,
+    "all_ids": [
+      11909,
+      11910,
+      11911,
+      11912
+    ],
+    "timestamp_utc": "2026-08-05T11:11:12+00:00",
+    "timestamp_ist": "2026-08-05T16:41:12+05:30",
+    "direction": "BUY",
+    "entry_price": 4167.0,
+    "sl": 4150.0,
+    "tp": [
+      4180.0,
+      4220.0
+    ],
+    "raw_text": "Buy Gold\nBuy Gold \u2705\n@4167 TRG 4180 4220\nSL 4150"
+  },
+  {
+    "message_id": 11924,
+    "all_ids": [
+      11924,
+      11925,
+      11926
+    ],
+    "timestamp_utc": "2026-08-06T07:56:34+00:00",
+    "timestamp_ist": "2026-08-06T13:26:34+05:30",
+    "direction": "SELL",
+    "entry_price": 4259.0,
+    "sl": 4274.0,
+    "tp": [
+      4230.0,
+      4200.0
+    ],
+    "raw_text": "Sell Gold Small Quantity\n@@4259 - 4258\nTRG 4230 4200 SL 4274"
+  },
+  {
+    "message_id": 11928,
+    "all_ids": [
+      11928,
+      11929,
+      11930,
+      11931
+    ],
+    "timestamp_utc": "2026-08-06T09:19:38+00:00",
+    "timestamp_ist": "2026-08-06T14:49:38+05:30",
+    "direction": "BUY",
+    "entry_price": 4282.0,
+    "sl": null,
+    "tp": [
+      4300.0,
+      4330.0
+    ],
+    "raw_text": "Buy Gold \u2705\n@4282\nSmall Quantity\nTRG 4300 4330"
+  },
+  {
+    "message_id": 11943,
+    "all_ids": [
+      11943,
+      11944,
+      11945
+    ],
+    "timestamp_utc": "2026-08-10T05:02:25+00:00",
+    "timestamp_ist": "2026-08-10T10:32:25+05:30",
+    "direction": "BUY",
+    "entry_price": 4335.0,
+    "sl": 4320.0,
+    "tp": [
+      4350.0,
+      4370.0
+    ],
+    "raw_text": "Buy Gold \u2705\n@4335\nTRG 4350 4370++ SL 4320"
+  },
+  {
+    "message_id": 11966,
+    "all_ids": [
+      11966,
+      11967,
+      11968
+    ],
+    "timestamp_utc": "2026-08-11T10:34:40+00:00",
+    "timestamp_ist": "2026-08-11T16:04:40+05:30",
+    "direction": "BUY",
+    "entry_price": 4378.0,
+    "sl": 4363.0,
+    "tp": [
+      4390.0,
+      4410.0
+    ],
+    "raw_text": "Buy Gold Small Quantity\n@4378\nTRG 4390 4410 SL 4363"
+  },
+  {
+    "message_id": 12016,
+    "all_ids": [
+      12016,
+      12017,
+      12018,
+      12019
+    ],
+    "timestamp_utc": "2026-08-24T13:32:40+00:00",
+    "timestamp_ist": "2026-08-24T19:02:40+05:30",
+    "direction": "BUY",
+    "entry_price": 4670.0,
+    "sl": null,
+    "tp": [
+      4700.0,
+      4730.0,
+      4679.0
+    ],
+    "raw_text": "Buy Gold Small Quantity\n@4670\nTRG 4700 4730\n4679 \ud83d\udd25\ud83d\udd25\ud83d\udd25"
+  },
+  {
+    "message_id": 12027,
+    "all_ids": [
+      12027,
+      12028,
+      12029,
+      12030
+    ],
+    "timestamp_utc": "2026-08-25T07:36:51+00:00",
+    "timestamp_ist": "2026-08-25T13:06:51+05:30",
+    "direction": "SELL",
+    "entry_price": 4364.0,
+    "sl": null,
+    "tp": [
+      4609.0,
+      4580.0
+    ],
+    "raw_text": "Sell Gold\n@4364\nSry @4634\nTRG 4609 4580"
+  },
+  {
+    "message_id": 12041,
+    "all_ids": [
+      12041,
+      12042,
+      12043,
+      12044
+    ],
+    "timestamp_utc": "2026-08-26T07:39:18+00:00",
+    "timestamp_ist": "2026-08-26T13:09:18+05:30",
+    "direction": "SELL",
+    "entry_price": 4631.0,
+    "sl": 4645.0,
+    "tp": [
+      4610.0,
+      4595.0
+    ],
+    "raw_text": "Sell Gold \u2705 Small Quantity\n@4631\nTRG 4610 4595\nSL 4645"
+  },
+  {
+    "message_id": 12063,
+    "all_ids": [
+      12063,
+      12064
+    ],
+    "timestamp_utc": "2026-08-28T07:39:47+00:00",
+    "timestamp_ist": "2026-08-28T13:09:47+05:30",
+    "direction": "BUY",
+    "entry_price": 4610.0,
+    "sl": 4596.0,
+    "tp": [
+      4635.0,
+      4650.0
+    ],
+    "raw_text": "Buy Gold\n@4610 TRG 4635 4650 SL 4596"
+  },
+  {
+    "message_id": 12067,
+    "all_ids": [
+      12067,
+      12068,
+      12069,
+      12070
+    ],
+    "timestamp_utc": "2026-08-31T08:52:48+00:00",
+    "timestamp_ist": "2026-08-31T14:22:48+05:30",
+    "direction": "BUY",
+    "entry_price": 4434.0,
+    "sl": 4423.0,
+    "tp": [
+      4443.0,
+      4456.0
+    ],
+    "raw_text": "Buy Gold \u2705\n@4434\nTRG 4443 4456\nSL 4423"
+  },
+  {
+    "message_id": 12083,
+    "all_ids": [
+      12083,
+      12084,
+      12085
+    ],
+    "timestamp_utc": "2026-09-01T08:20:26+00:00",
+    "timestamp_ist": "2026-09-01T13:50:26+05:30",
+    "direction": "BUY",
+    "entry_price": 4396.0,
+    "sl": 4381.0,
+    "tp": [
+      4403.0,
+      4415.0
+    ],
+    "raw_text": "Buy Gold Small quantity\n@4396\nSL 4381 TRG 4403 4415"
+  },
+  {
+    "message_id": 12088,
+    "all_ids": [
+      12088,
+      12089
+    ],
+    "timestamp_utc": "2026-09-01T09:05:42+00:00",
+    "timestamp_ist": "2026-09-01T14:35:42+05:30",
+    "direction": "BUY",
+    "entry_price": 4372.0,
+    "sl": 4361.0,
+    "tp": [
+      4395.0
+    ],
+    "raw_text": "Buy Gold @4372 SL 4361 TRG 4395+++\nLast Trade For Today"
+  },
+  {
+    "message_id": 12107,
+    "all_ids": [
+      12107,
+      12108
+    ],
+    "timestamp_utc": "2026-09-07T03:39:42+00:00",
+    "timestamp_ist": "2026-09-07T09:09:42+05:30",
+    "direction": "SELL",
+    "entry_price": 4405.0,
+    "sl": 4419.0,
+    "tp": [
+      4390.0,
+      4370.0
+    ],
+    "raw_text": "Sell Gold \u2705\n@4405 TRG 4390 4370 SL 4419"
+  },
+  {
+    "message_id": 12142,
+    "all_ids": [
+      12142,
+      12143,
+      12144
+    ],
+    "timestamp_utc": "2026-09-14T05:12:24+00:00",
+    "timestamp_ist": "2026-09-14T10:42:24+05:30",
+    "direction": "SELL",
+    "entry_price": 4327.0,
+    "sl": 4339.0,
+    "tp": [
+      4310.0,
+      4295.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold @4327\nTRG 4310 4295 SL 4339"
+  },
+  {
+    "message_id": 12188,
+    "all_ids": [
+      12188,
+      12189,
+      12190
+    ],
+    "timestamp_utc": "2026-09-18T04:05:13+00:00",
+    "timestamp_ist": "2026-09-18T09:35:13+05:30",
+    "direction": "BUY",
+    "entry_price": 4360.0,
+    "sl": 4345.0,
+    "tp": [
+      4380.0,
+      4400.0
+    ],
+    "raw_text": "Buy Gold \u2705\n@4360 TRG 4380 4400\nSL 4345"
+  },
+  {
+    "message_id": 12222,
+    "all_ids": [
+      12222,
+      12223,
+      12224
+    ],
+    "timestamp_utc": "2026-09-23T06:26:27+00:00",
+    "timestamp_ist": "2026-09-23T11:56:27+05:30",
+    "direction": "SELL",
+    "entry_price": 4330.0,
+    "sl": 4345.0,
+    "tp": [
+      4315.0,
+      4285.0
+    ],
+    "raw_text": "Sell Gold @4330\nTRG 4315 4285\nSL 4345"
+  },
+  {
+    "message_id": 12256,
+    "all_ids": [
+      12256,
+      12257,
+      12258
+    ],
+    "timestamp_utc": "2026-09-29T10:39:12+00:00",
+    "timestamp_ist": "2026-09-29T16:09:12+05:30",
+    "direction": "SELL",
+    "entry_price": 4149.0,
+    "sl": 4161.0,
+    "tp": [
+      4135.0,
+      4120.0
+    ],
+    "raw_text": "Sell Gold\n@4149\nSL 4161 TRG 4135 4120"
+  },
+  {
+    "message_id": 12263,
+    "all_ids": [
+      12263,
+      12264,
+      12265
+    ],
+    "timestamp_utc": "2026-09-30T07:52:23+00:00",
+    "timestamp_ist": "2026-09-30T13:22:23+05:30",
+    "direction": "BUY",
+    "entry_price": 4195.0,
+    "sl": null,
+    "tp": [
+      4280.0
+    ],
+    "raw_text": "Buy Gold \u2705\n@4195\nTRG 4280"
+  },
+  {
+    "message_id": 12273,
+    "all_ids": [
+      12273,
+      12274,
+      12275,
+      12276,
+      12277
+    ],
+    "timestamp_utc": "2026-10-01T07:26:34+00:00",
+    "timestamp_ist": "2026-10-01T12:56:34+05:30",
+    "direction": "SELL",
+    "entry_price": 4157.0,
+    "sl": 4174.0,
+    "tp": [
+      4145.0,
+      4120.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold\n@4157\nTRG 4145 4120\nSL 4174"
+  },
+  {
+    "message_id": 12285,
+    "all_ids": [
+      12285,
+      12286,
+      12287,
+      12288
+    ],
+    "timestamp_utc": "2026-10-01T16:51:07+00:00",
+    "timestamp_ist": "2026-10-01T22:21:07+05:30",
+    "direction": "SELL",
+    "entry_price": 4163.0,
+    "sl": 4171.0,
+    "tp": [
+      4155.0,
+      4130.0
+    ],
+    "raw_text": "Sell Gold @4163\nSell Gold\nSell Gold \u2705\nSL 4171 TRG 4155 4130"
+  },
+  {
+    "message_id": 12334,
+    "all_ids": [
+      12334,
+      12335,
+      12336,
+      12337,
+      12338,
+      12339
+    ],
+    "timestamp_utc": "2026-10-05T07:51:23+00:00",
+    "timestamp_ist": "2026-10-05T13:21:23+05:30",
+    "direction": "SELL",
+    "entry_price": 4162.0,
+    "sl": 4176.0,
+    "tp": [
+      4150.0,
+      4135.0
+    ],
+    "raw_text": "Sell Gold\nSell XAUUSD\nSell Gold\n@4162\nTRG 4150 4135\nSL 4176"
+  },
+  {
+    "message_id": 12348,
+    "all_ids": [
+      12348,
+      12349,
+      12350
+    ],
+    "timestamp_utc": "2026-10-06T14:24:56+00:00",
+    "timestamp_ist": "2026-10-06T19:54:56+05:30",
+    "direction": "SELL",
+    "entry_price": 4147.0,
+    "sl": 4160.0,
+    "tp": [
+      4135.0
+    ],
+    "raw_text": "Sell Gold\n@4147\nTRG 4135 SL 4160"
+  },
+  {
+    "message_id": 12353,
+    "all_ids": [
+      12353,
+      12354,
+      12355,
+      12356,
+      12357
+    ],
+    "timestamp_utc": "2026-10-07T04:43:05+00:00",
+    "timestamp_ist": "2026-10-07T10:13:05+05:30",
+    "direction": "SELL",
+    "entry_price": 4138.0,
+    "sl": 4148.0,
+    "tp": [
+      4125.0,
+      4110.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold \u2705\n@4138\nTRG 4125 4110\nSL 4148"
+  },
+  {
+    "message_id": 12384,
+    "all_ids": [
+      12384,
+      12385,
+      12386,
+      12387,
+      12388
+    ],
+    "timestamp_utc": "2026-10-08T06:22:33+00:00",
+    "timestamp_ist": "2026-10-08T11:52:33+05:30",
+    "direction": "SELL",
+    "entry_price": 4118.0,
+    "sl": 4136.0,
+    "tp": [
+      4080.0,
+      4060.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold\n@4118\nTRG 4080 4060\nSL 4136"
+  },
+  {
+    "message_id": 12395,
+    "all_ids": [
+      12395,
+      12396
+    ],
+    "timestamp_utc": "2026-10-09T02:48:53+00:00",
+    "timestamp_ist": "2026-10-09T08:18:53+05:30",
+    "direction": "SELL",
+    "entry_price": 4175.0,
+    "sl": 4186.0,
+    "tp": [
+      4155.0,
+      4130.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold @4175 TRG 4155 4130 SL 4186"
+  },
+  {
+    "message_id": 12399,
+    "all_ids": [
+      12399,
+      12400,
+      12401
+    ],
+    "timestamp_utc": "2026-10-09T08:50:24+00:00",
+    "timestamp_ist": "2026-10-09T14:20:24+05:30",
+    "direction": "SELL",
+    "entry_price": 4189.0,
+    "sl": null,
+    "tp": [
+      4180.0,
+      4170.0,
+      4150.0
+    ],
+    "raw_text": "Sell Gold\n@4189\nTRG 4180 4170 4150"
+  },
+  {
+    "message_id": 12411,
+    "all_ids": [
+      12411,
+      12412,
+      12413
+    ],
+    "timestamp_utc": "2026-10-09T14:08:29+00:00",
+    "timestamp_ist": "2026-10-09T19:38:29+05:30",
+    "direction": "BUY",
+    "entry_price": 4188.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Buy Gold\nBuy Gold\n@4188"
+  },
+  {
+    "message_id": 12423,
+    "all_ids": [
+      12423,
+      12424,
+      12425,
+      12426
+    ],
+    "timestamp_utc": "2026-10-12T07:46:21+00:00",
+    "timestamp_ist": "2026-10-12T13:16:21+05:30",
+    "direction": "SELL",
+    "entry_price": 4181.0,
+    "sl": null,
+    "tp": [
+      4165.0,
+      4140.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold\n@4181\nTRG 4165 4140"
+  },
+  {
+    "message_id": 12437,
+    "all_ids": [
+      12437,
+      12438,
+      12439,
+      12440
+    ],
+    "timestamp_utc": "2026-10-13T11:07:30+00:00",
+    "timestamp_ist": "2026-10-13T16:37:30+05:30",
+    "direction": "BUY",
+    "entry_price": 4183.0,
+    "sl": null,
+    "tp": [
+      4195.0,
+      4210.0
+    ],
+    "raw_text": "Buy Gold\nBUY Gold\n@4183\nTRG 4195 4210"
+  },
+  {
+    "message_id": 12447,
+    "all_ids": [
+      12447,
+      12448,
+      12449,
+      12450
+    ],
+    "timestamp_utc": "2026-10-14T03:10:57+00:00",
+    "timestamp_ist": "2026-10-14T08:40:57+05:30",
+    "direction": "BUY",
+    "entry_price": 4165.0,
+    "sl": 4150.0,
+    "tp": [
+      4180.0,
+      4195.0
+    ],
+    "raw_text": "Buy Gold\n@4165\nTRG 4180 4195\nSL 4150"
+  },
+  {
+    "message_id": 12455,
+    "all_ids": [
+      12455,
+      12456,
+      12457,
+      12458,
+      12459,
+      12460
+    ],
+    "timestamp_utc": "2026-10-14T06:17:28+00:00",
+    "timestamp_ist": "2026-10-14T11:47:28+05:30",
+    "direction": "SELL",
+    "entry_price": 4159.0,
+    "sl": 4175.0,
+    "tp": [
+      4147.0,
+      4135.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold \u2705\n@4159\nTRG 4147 4135\nSL 4175"
+  },
+  {
+    "message_id": 12491,
+    "all_ids": [
+      12491,
+      12492,
+      12493,
+      12494
+    ],
+    "timestamp_utc": "2026-10-15T08:09:34+00:00",
+    "timestamp_ist": "2026-10-15T13:39:34+05:30",
+    "direction": "BUY",
+    "entry_price": 4149.0,
+    "sl": null,
+    "tp": [
+      4165.0,
+      4185.0
+    ],
+    "raw_text": "Buy Gold\nBuy Gold \u2705\n@4149\nTRG 4165 4185"
+  },
+  {
+    "message_id": 12504,
+    "all_ids": [
+      12504,
+      12505,
+      12506
+    ],
+    "timestamp_utc": "2026-10-15T09:21:49+00:00",
+    "timestamp_ist": "2026-10-15T14:51:49+05:30",
+    "direction": "BUY",
+    "entry_price": 4157.0,
+    "sl": null,
+    "tp": [
+      4170.0
+    ],
+    "raw_text": "Buy Gold\n@4157\nTRG 4170+"
+  },
+  {
+    "message_id": 12511,
+    "all_ids": [
+      12511,
+      12512,
+      12513,
+      12514
+    ],
+    "timestamp_utc": "2026-10-16T03:21:55+00:00",
+    "timestamp_ist": "2026-10-16T08:51:55+05:30",
+    "direction": "BUY",
+    "entry_price": 4172.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Buy Gold\nBuy Gold\nBuy Gold\u2705\n@4172"
+  },
+  {
+    "message_id": 12525,
+    "all_ids": [
+      12525,
+      12526
+    ],
+    "timestamp_utc": "2026-10-16T09:23:04+00:00",
+    "timestamp_ist": "2026-10-16T14:53:04+05:30",
+    "direction": "BUY",
+    "entry_price": 4187.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Buy Gold\u2705\n@4187"
+  },
+  {
+    "message_id": 12543,
+    "all_ids": [
+      12543,
+      12544,
+      12545,
+      12546
+    ],
+    "timestamp_utc": "2026-10-19T08:50:59+00:00",
+    "timestamp_ist": "2026-10-19T14:20:59+05:30",
+    "direction": "SELL",
+    "entry_price": 4171.0,
+    "sl": 4188.0,
+    "tp": [
+      4155.0,
+      4130.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold\n@4171\nTRG 4155 4130 SL 4188"
+  },
+  {
+    "message_id": 12564,
+    "all_ids": [
+      12564,
+      12565,
+      12566
+    ],
+    "timestamp_utc": "2026-10-21T07:00:16+00:00",
+    "timestamp_ist": "2026-10-21T12:30:16+05:30",
+    "direction": "SELL",
+    "entry_price": 4112.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Sell Gold\nSell Gold\n@4112"
+  },
+  {
+    "message_id": 12569,
+    "all_ids": [
+      12569,
+      12570,
+      12571
+    ],
+    "timestamp_utc": "2026-10-22T09:23:00+00:00",
+    "timestamp_ist": "2026-10-22T14:53:00+05:30",
+    "direction": "SELL",
+    "entry_price": 4088.0,
+    "sl": 4093.0,
+    "tp": [
+      4080.0,
+      4070.0
+    ],
+    "raw_text": "Sell Gold Small Quantity\n@4088\nTRG 4080 4070 SL 4093"
+  },
+  {
+    "message_id": 12576,
+    "all_ids": [
+      12576,
+      12577,
+      12578,
+      12579
+    ],
+    "timestamp_utc": "2026-10-23T08:00:51+00:00",
+    "timestamp_ist": "2026-10-23T13:30:51+05:30",
+    "direction": "SELL",
+    "entry_price": 4013.0,
+    "sl": 4026.0,
+    "tp": [
+      3995.0,
+      3965.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold\u2705\n@4013\nTRG 3995 3965 SL 4026"
+  },
+  {
+    "message_id": 12582,
+    "all_ids": [
+      12582
+    ],
+    "timestamp_utc": "2026-10-26T03:27:46+00:00",
+    "timestamp_ist": "2026-10-26T08:57:46+05:30",
+    "direction": "BUY",
+    "entry_price": 4008.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Buy Gold @4008 - 4007 Wait for the level"
+  },
+  {
+    "message_id": 12595,
+    "all_ids": [
+      12595,
+      12596,
+      12597
+    ],
+    "timestamp_utc": "2026-10-27T08:15:30+00:00",
+    "timestamp_ist": "2026-10-27T13:45:30+05:30",
+    "direction": "SELL",
+    "entry_price": 3997.0,
+    "sl": 4012.0,
+    "tp": [
+      3985.0,
+      3955.0
+    ],
+    "raw_text": "Sell Gold\n@3997\nTRG 3985 3955 SL 4012"
+  },
+  {
+    "message_id": 12604,
+    "all_ids": [
+      12604,
+      12605,
+      12606,
+      12607
+    ],
+    "timestamp_utc": "2026-10-28T05:39:16+00:00",
+    "timestamp_ist": "2026-10-28T11:09:16+05:30",
+    "direction": "BUY",
+    "entry_price": 4033.0,
+    "sl": 4022.0,
+    "tp": [
+      4050.0,
+      4070.0
+    ],
+    "raw_text": "Buy Gold\nBuy Gold \u2705\n@4033\nTRG 4050 4070 SL 4022"
+  },
+  {
+    "message_id": 12640,
+    "all_ids": [
+      12640,
+      12641,
+      12642,
+      12643
+    ],
+    "timestamp_utc": "2026-11-02T05:22:19+00:00",
+    "timestamp_ist": "2026-11-02T10:52:19+05:30",
+    "direction": "SELL",
+    "entry_price": 3908.0,
+    "sl": 3928.0,
+    "tp": [
+      3888.0,
+      3865.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold @3908\nUse Small Quantity SL 3928\nTRG 3888 3865"
+  },
+  {
+    "message_id": 12659,
+    "all_ids": [
+      12659,
+      12660,
+      12661
+    ],
+    "timestamp_utc": "2026-11-03T04:52:17+00:00",
+    "timestamp_ist": "2026-11-03T10:22:17+05:30",
+    "direction": "SELL",
+    "entry_price": 3922.0,
+    "sl": null,
+    "tp": [],
+    "raw_text": "Sell Gold\nSell Gold \u2705\n@3922"
+  },
+  {
+    "message_id": 12674,
+    "all_ids": [
+      12674,
+      12675,
+      12676,
+      12677,
+      12678
+    ],
+    "timestamp_utc": "2026-11-03T09:07:32+00:00",
+    "timestamp_ist": "2026-11-03T14:37:32+05:30",
+    "direction": "BUY",
+    "entry_price": 3902.0,
+    "sl": 3887.0,
+    "tp": [
+      3915.0,
+      3925.0
+    ],
+    "raw_text": "Buy Gold Small Quantity\n@3902\nTRG 3915 3925\nSL 3887\nUse Small quantity"
+  },
+  {
+    "message_id": 12705,
+    "all_ids": [
+      12705,
+      12706
+    ],
+    "timestamp_utc": "2026-11-04T07:01:21+00:00",
+    "timestamp_ist": "2026-11-04T12:31:21+05:30",
+    "direction": "SELL",
+    "entry_price": 4024.0,
+    "sl": 4037.0,
+    "tp": [
+      4006.0,
+      3995.0
+    ],
+    "raw_text": "Sell Gold SL 4037 TRG 4006 3995\nSell Gold @4024 \u2705"
+  },
+  {
+    "message_id": 12711,
+    "all_ids": [
+      12711,
+      12712
+    ],
+    "timestamp_utc": "2026-11-04T08:52:59+00:00",
+    "timestamp_ist": "2026-11-04T14:22:59+05:30",
+    "direction": "SELL",
+    "entry_price": 4035.0,
+    "sl": 4048.0,
+    "tp": [
+      4020.0,
+      4005.0
+    ],
+    "raw_text": "Sell Gold @4035\nTRG 4020 4005 SL 4048"
+  },
+  {
+    "message_id": 12720,
+    "all_ids": [
+      12720,
+      12721,
+      12722
+    ],
+    "timestamp_utc": "2026-11-05T07:37:04+00:00",
+    "timestamp_ist": "2026-11-05T13:07:04+05:30",
+    "direction": "BUY",
+    "entry_price": 4117.0,
+    "sl": 4100.0,
+    "tp": [
+      4130.0,
+      4145.0
+    ],
+    "raw_text": "Buy Gold\nBuy Gold @4117\nTRG 4130 4145 Sl 4100"
+  },
+  {
+    "message_id": 12734,
+    "all_ids": [
+      12734,
+      12735,
+      12736,
+      12737
+    ],
+    "timestamp_utc": "2026-11-06T08:49:11+00:00",
+    "timestamp_ist": "2026-11-06T14:19:11+05:30",
+    "direction": "SELL",
+    "entry_price": 4073.0,
+    "sl": 4088.0,
+    "tp": [
+      4053.0,
+      4035.0
+    ],
+    "raw_text": "Sell Gold\n@4073\nTRG 4053 4035 SL 4088"
+  },
+  {
+    "message_id": 12776,
+    "all_ids": [
+      12776,
+      12777,
+      12778,
+      12779
+    ],
+    "timestamp_utc": "2026-11-09T08:15:15+00:00",
+    "timestamp_ist": "2026-11-09T13:45:15+05:30",
+    "direction": "BUY",
+    "entry_price": 4091.0,
+    "sl": 4075.0,
+    "tp": [
+      4110.0,
+      4130.0
+    ],
+    "raw_text": "Buy Gold\nBuy Gold\n@4091\nTRG 4110 4130 SL 4075"
+  },
+  {
+    "message_id": 12793,
+    "all_ids": [
+      12793,
+      12794
+    ],
+    "timestamp_utc": "2026-11-10T03:47:04+00:00",
+    "timestamp_ist": "2026-11-10T09:17:04+05:30",
+    "direction": "SELL",
+    "entry_price": 4111.0,
+    "sl": 4125.0,
+    "tp": [
+      4095.0,
+      4085.0
+    ],
+    "raw_text": "Sell Gold @4111\nTRG 4095 4085 SL 4125"
+  },
+  {
+    "message_id": 12796,
+    "all_ids": [
+      12796,
+      12797,
+      12798,
+      12799
+    ],
+    "timestamp_utc": "2026-11-10T09:04:29+00:00",
+    "timestamp_ist": "2026-11-10T14:34:29+05:30",
+    "direction": "SELL",
+    "entry_price": 4099.0,
+    "sl": 4115.0,
+    "tp": [
+      4088.0,
+      4075.0
+    ],
+    "raw_text": "Sell Gold\n@4099\nTRG 4088 4075\nSL 4115"
+  },
+  {
+    "message_id": 12810,
+    "all_ids": [
+      12810,
+      12811,
+      12812
+    ],
+    "timestamp_utc": "2026-11-10T12:03:40+00:00",
+    "timestamp_ist": "2026-11-10T17:33:40+05:30",
+    "direction": "BUY",
+    "entry_price": 4076.0,
+    "sl": 4068.0,
+    "tp": [
+      4095.0,
+      4120.0
+    ],
+    "raw_text": "Expecting Buy Gold \ud83d\ude80\nBuy Gold small quantity @4076 TRG 4095 4120\nSL 4068"
+  },
+  {
+    "message_id": 12816,
+    "all_ids": [
+      12816,
+      12817,
+      12818,
+      12819
+    ],
+    "timestamp_utc": "2026-11-11T05:58:12+00:00",
+    "timestamp_ist": "2026-11-11T11:28:12+05:30",
+    "direction": "SELL",
+    "entry_price": 4059.0,
+    "sl": 4075.0,
+    "tp": [
+      4048.0,
+      4035.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold \u2705\n@4059\nSL 4075 TRG 4048 4035"
+  },
+  {
+    "message_id": 12850,
+    "all_ids": [
+      12850,
+      12851,
+      12852,
+      12853
+    ],
+    "timestamp_utc": "2026-11-12T06:55:35+00:00",
+    "timestamp_ist": "2026-11-12T12:25:35+05:30",
+    "direction": "SELL",
+    "entry_price": 3966.0,
+    "sl": 3981.0,
+    "tp": [
+      3955.0,
+      3940.0
+    ],
+    "raw_text": "Sell Gold\nSell Gold \u2705\n@3966\nTRG 3955 3940 SL 3981"
+  },
+  {
+    "message_id": 12871,
+    "all_ids": [
+      12871,
+      12872,
+      12873
+    ],
+    "timestamp_utc": "2026-11-13T06:45:32+00:00",
+    "timestamp_ist": "2026-11-13T12:15:32+05:30",
+    "direction": "SELL",
+    "entry_price": 3890.0,
+    "sl": 3905.0,
+    "tp": [
+      3875.0,
+      3860.0
+    ],
+    "raw_text": "Sell Gold\nSmall Quantity\n@3890 SL 3905 TRG 3875 3860"
+  }
+]
