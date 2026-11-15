@@ -75,3 +75,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 htmlcov/
+
+# Backtest cache and results
+data/cached_*.json
+data/backtest_results.json
