@@ -1,2 +1,2 @@
-kafka-python-ng>=2.2.3
+google-cloud-pubsub>=2.19.0
 urllib3>=2.0.0

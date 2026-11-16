@@ -1,7 +1,7 @@
 """
 Main Autonomous AI Gold Trading Agent
 Orchestrates Perception -> Reasoning -> Action -> Reflection loop.
-Runs 24/7 on OCI VM and dispatches trade events to Kafka.
+Runs 24/7 on OCI VM and dispatches trade events to Google Cloud Pub/Sub.
 """
 
 import os
@@ -14,7 +14,7 @@ from .market_feed import GoldMarketFeed
 from .strategy_engine import StrategyEngine
 from .memory import AgentMemory
 from .brain import AgentBrain
-from .kafka_producer import KafkaPublisher
+from .pubsub_publisher import PubSubPublisher
 
 logging.basicConfig(
     level=logging.INFO,
@@ -28,8 +28,9 @@ class AutonomousGoldAgent:
         # Configuration
         self.symbol = os.environ.get("GOLD_SYMBOL", "XAUUSD")
         self.market_symbol = os.environ.get("MARKET_SYMBOL", "PAXGUSDT")
-        self.kafka_servers = os.environ.get("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092")
-        self.kafka_topic = os.environ.get("KAFKA_TOPIC", "gold-trading-signals")
+        self.gcp_project_id = os.environ.get("GCP_PROJECT_ID", "fourth-arena-460820-s6")
+        self.pubsub_topic_id = os.environ.get("PUBSUB_TOPIC_ID", "gold-trading-signals-agent-001")
+        self.credentials_path = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", "service_account.json")
 
         # Initialize Subsystems
         self.feed = GoldMarketFeed(symbol=self.market_symbol, interval="5m")
@@ -41,7 +42,11 @@ class AutonomousGoldAgent:
         )
         self.memory = AgentMemory()
         self.brain = AgentBrain(self.memory)
-        self.publisher = KafkaPublisher(self.kafka_servers, self.kafka_topic)
+        self.publisher = PubSubPublisher(
+            project_id=self.gcp_project_id,
+            topic_id=self.pubsub_topic_id,
+            credentials_path=self.credentials_path
+        )
 
         # In-flight State
         self.active_trade = None
@@ -53,14 +58,15 @@ class AutonomousGoldAgent:
         logger.info("🤖 AUTONOMOUS OCI AI GOLD TRADING AGENT ONLINE")
         logger.info(f"Target Asset:     {self.symbol}")
         logger.info(f"Market Feed:      {self.market_symbol} (Zero-auth live feed)")
-        logger.info(f"Kafka Cluster:    {self.kafka_servers} (Topic: {self.kafka_topic})")
+        logger.info(f"Pub/Sub Project:  {self.gcp_project_id or '(Not Set - local log mode)'}")
+        logger.info(f"Pub/Sub Topic:    {self.pubsub_topic_id}")
         logger.info(f"Confidence Gate:  {self.brain.min_confidence_threshold * 100}%")
         logger.info("=" * 80)
 
-        # Send initial boot status to Kafka
+        # Send initial boot status to Google Cloud Pub/Sub
         self.publisher.publish_event("AGENT_STATUS", {
             "status": "ONLINE",
-            "message": "AI Gold Agent booted on OCI VM. Scanning live markets."
+            "message": "AI Gold Agent booted on OCI VM. Streaming signals to Google Pub/Sub."
         })
 
         while True:
@@ -107,7 +113,7 @@ class AutonomousGoldAgent:
             logger.warning(f"Setup REJECTED by AI Brain (Confidence {deliberation['confidence_score']} < {self.brain.min_confidence_threshold}).")
             return
 
-        # 3. Action Dispatch: Publish High-Confidence Signal to Kafka
+        # 3. Action Dispatch: Publish High-Confidence Signal to Google Pub/Sub
         signal_payload = {
             "symbol": self.symbol,
             "direction": setup["direction"],

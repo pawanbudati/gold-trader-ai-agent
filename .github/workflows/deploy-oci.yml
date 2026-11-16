@@ -23,25 +23,52 @@ jobs:
           key: ${{ secrets.OCI_SSH_KEY }}
           port: ${{ secrets.OCI_VM_PORT || 22 }}
           target: "~/oci-gold-ai-agent"
-          source: "src,data,tests,main.py,requirements.txt,Dockerfile,docker-compose.yml,gold-agent.service,deploy_oci.sh,.env.example"
+          source: "src,data,tests,main.py,listen.py,requirements.txt,Dockerfile,docker-compose.yml,gold-agent.service,deploy_oci.sh,.env.example"
           strip_components: 0
           overwrite: true
 
-      - name: Restart AI Agent on OCI VM
+      - name: Deploy and Restart AI Agent on OCI VM
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          GCP_KEY: ${{ secrets.GCP_PUBSUB_KEY || secrets.GCP_SA_KEY }}
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID || 'fourth-arena-460820-s6' }}
+          PUBSUB_TOPIC_ID: ${{ secrets.PUBSUB_TOPIC_ID || 'gold-trading-signals-agent-001' }}
+          PUBSUB_SUBSCRIPTION_ID: ${{ secrets.PUBSUB_SUBSCRIPTION_ID || 'gold-trading-signals-agent-001-sub-001' }}
         with:
           host: ${{ secrets.OCI_VM_HOST }}
           username: ${{ secrets.OCI_VM_USER }}
           key: ${{ secrets.OCI_SSH_KEY }}
           port: ${{ secrets.OCI_VM_PORT || 22 }}
+          envs: GCP_KEY,GCP_PROJECT_ID,PUBSUB_TOPIC_ID,PUBSUB_SUBSCRIPTION_ID
           script: |
             set -e
             cd ~/oci-gold-ai-agent
 
-            # Ensure .env exists (create from template if missing)
+            # 1. Update GCP Service Account Key from GitHub Secret if provided
+            if [ -n "$GCP_KEY" ]; then
+              echo "$GCP_KEY" > service_account.json
+              chmod 600 service_account.json
+              echo "✅ GCP Service Account Key updated at ~/oci-gold-ai-agent/service_account.json"
+            else
+              echo "ℹ️  GCP_PUBSUB_KEY secret not passed in GitHub Actions. Using existing on-disk key if available."
+            fi
+
+            # 2. Setup or update .env file
             if [ ! -f .env ]; then
               cp .env.example .env
-              echo "Created initial .env file. Please edit it with your Kafka IP."
+              echo "Created initial .env from template."
+            fi
+
+            # Sync Google Cloud Pub/Sub parameters in .env
+            grep -q "^GCP_PROJECT_ID=" .env && sed -i "s|^GCP_PROJECT_ID=.*|GCP_PROJECT_ID=${GCP_PROJECT_ID}|" .env || echo "GCP_PROJECT_ID=${GCP_PROJECT_ID}" >> .env
+            grep -q "^PUBSUB_TOPIC_ID=" .env && sed -i "s|^PUBSUB_TOPIC_ID=.*|PUBSUB_TOPIC_ID=${PUBSUB_TOPIC_ID}|" .env || echo "PUBSUB_TOPIC_ID=${PUBSUB_TOPIC_ID}" >> .env
+            grep -q "^PUBSUB_SUBSCRIPTION_ID=" .env && sed -i "s|^PUBSUB_SUBSCRIPTION_ID=.*|PUBSUB_SUBSCRIPTION_ID=${PUBSUB_SUBSCRIPTION_ID}|" .env || echo "PUBSUB_SUBSCRIPTION_ID=${PUBSUB_SUBSCRIPTION_ID}" >> .env
+            grep -q "^GOOGLE_APPLICATION_CREDENTIALS=" .env && sed -i "s|^GOOGLE_APPLICATION_CREDENTIALS=.*|GOOGLE_APPLICATION_CREDENTIALS=service_account.json|" .env || echo "GOOGLE_APPLICATION_CREDENTIALS=service_account.json" >> .env
+
+            # 3. Synchronize service account key with systemd install dir if it exists
+            if [ -d "/opt/oci-gold-ai-agent" ] && [ -f "service_account.json" ]; then
+              sudo cp service_account.json /opt/oci-gold-ai-agent/service_account.json
+              sudo chmod 600 /opt/oci-gold-ai-agent/service_account.json
             fi
 
             echo "=== Checking Execution Engine ==="

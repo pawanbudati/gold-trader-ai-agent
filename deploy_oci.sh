@@ -28,14 +28,21 @@ sudo chown -R "$USER:$USER" "$INSTALL_DIR"
 # 3. Copy application files from source to install directory
 cp -r "$SOURCE_DIR/src" "$INSTALL_DIR/"
 cp -r "$SOURCE_DIR/data" "$INSTALL_DIR/"
+[ -d "$SOURCE_DIR/tests" ] && cp -r "$SOURCE_DIR/tests" "$INSTALL_DIR/"
+[ -f "$SOURCE_DIR/listen.py" ] && cp "$SOURCE_DIR/listen.py" "$INSTALL_DIR/"
 cp "$SOURCE_DIR/main.py" "$SOURCE_DIR/requirements.txt" "$INSTALL_DIR/"
 [ -f "$SOURCE_DIR/gold-agent.service" ] && cp "$SOURCE_DIR/gold-agent.service" "$INSTALL_DIR/"
 
-# Handle .env file
+# Handle .env file and GCP credentials
 if [ -f "$SOURCE_DIR/.env" ]; then
     cp "$SOURCE_DIR/.env" "$INSTALL_DIR/.env"
 elif [ ! -f "$INSTALL_DIR/.env" ] && [ -f "$SOURCE_DIR/.env.example" ]; then
     cp "$SOURCE_DIR/.env.example" "$INSTALL_DIR/.env"
+fi
+
+if [ -f "$SOURCE_DIR/service_account.json" ]; then
+    cp "$SOURCE_DIR/service_account.json" "$INSTALL_DIR/service_account.json"
+    chmod 600 "$INSTALL_DIR/service_account.json"
 fi
 
 # 4. Setup Python Virtual Environment

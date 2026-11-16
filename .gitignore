@@ -42,6 +42,11 @@ venv.bak/
 *.pem
 *.key
 *.crt
+*service_account*.json
+*credentials*.json
+gcp-key*.json
+*pubsub-key*.json
+*.key.json
 
 # Logs and databases
 *.log
